@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Spotify m3 by elribonazo</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/elribonazo/spotify_m3">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/elribonazo/spotify_m3/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/elribonazo/spotify_m3/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Spotify m3</h1>
+          <p>Nodejs Module that implements track search and its information</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/elribonazo">elribonazo</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="spotify_m3" class="anchor" href="#spotify_m3"><span class="octicon octicon-link"></span></a>spotify_m3</h1>
+
+<p>Nodejs Module that implements track search and its information</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">spm3</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"spotify_m3"</span><span class="p">);</span>
+</pre></div>
+
+<h1>
+<a name="get-all-the-albums-and-tracks-by-artist-name" class="anchor" href="#get-all-the-albums-and-tracks-by-artist-name"><span class="octicon octicon-link"></span></a>Get all the albums and tracks by artist name</h1>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">spm3</span><span class="p">.</span><span class="nx">get_albums_by_artist</span><span class="p">(</span><span class="s2">"coldplay"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h1>
+<a name="get-album-tracks-by-artist-name" class="anchor" href="#get-album-tracks-by-artist-name"><span class="octicon octicon-link"></span></a>Get album tracks by Artist name</h1>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">spm3</span><span class="p">.</span><span class="nx">get_album_tracks_by_artist</span><span class="p">(</span><span class="s2">"coldplay"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h1>
+<a name="get-tracks-from-a-album-array" class="anchor" href="#get-tracks-from-a-album-array"><span class="octicon octicon-link"></span></a>Get tracks from a album array</h1>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">albums_array</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s1">'spotify_album_id121332'</span><span class="p">},</span>
+<span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s1">'spotify_album_id121333'</span><span class="p">},</span>
+<span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s1">'spotify_album_id121334'</span><span class="p">}</span>
+<span class="p">];</span>
+
+
+<span class="nx">spm3</span><span class="p">.</span><span class="nx">getalbumstracks</span><span class="p">(</span><span class="nx">albums_array</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h1>
+<a name="get-all-the-artist-array-albums" class="anchor" href="#get-all-the-artist-array-albums"><span class="octicon octicon-link"></span></a>Get all the artist array albums</h1>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">artist_array</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s1">'spotify_artist_id121332'</span><span class="p">},</span>
+<span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s1">'spotify_artist_id121333'</span><span class="p">},</span>
+<span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="s1">'spotify_artist_id121334'</span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="nx">spm3</span><span class="p">.</span><span class="nx">getalbums</span><span class="p">(</span><span class="nx">artist_array</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">);</span>
+</pre></div>
+
+<h3>
+<a name="more-tests-in-testtestjs" class="anchor" href="#more-tests-in-testtestjs"><span class="octicon octicon-link"></span></a>More tests in /test/test.js</h3>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
