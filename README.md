@@ -20,7 +20,7 @@ spm3.get_albums_by_artist("coldplay", function(data){
 spm3.get_album_tracks_by_artist("coldplay", function(data){
 	console.log(data);
 });
-
+```
 
 # Get tracks from a album array
 ```javascript
