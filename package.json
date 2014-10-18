@@ -1,6 +1,6 @@
 {
   "name": "spotify_m3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "spotify_m3 ==========",
   "main": "lib/spotify_m3.js",
   "directories": {
