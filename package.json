@@ -1,6 +1,6 @@
 {
   "name": "spotify_m3",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "spotify_m3 ==========",
   "main": "lib/spotify_m3.js",
   "directories": {
@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "deferred": "^0.7.1"
+    "deferred": "^0.7.1",
+    "events": "^1.0.2",
+    "util": "^0.10.3"
   },
   "devDependencies": {},
   "scripts": {
