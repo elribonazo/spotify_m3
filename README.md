@@ -14,7 +14,6 @@ spm3.get_albums_by_artist("coldplay", function(data){
 });
 ```
 
-
 # Get album tracks by Artist name
 ```javascript
 spm3.get_album_tracks_by_artist("coldplay", function(data){
@@ -48,3 +47,5 @@ spm3.getalbums(artist_array, function(data){
 	console.log(data);
 );
 ```
+
+###More tests in /test/test.js
